@@ -1,7 +1,12 @@
+# SD Stroke Design Project
 
-# 📨 SD Stroke - Laravel Contact Form with PHPMailer
+SD Stroke Design is a professional web-based contact platform created for a creative design agency. Built using Laravel 11 and integrated with PHPMailer, the site allows potential clients to easily submit design inquiries via a secure and responsive contact form. Messages are instantly delivered to the agency's inbox through Gmail SMTP, without requiring any database.
 
-This project is a Laravel 11 application with a simple frontend and a fully functional contact form using **PHPMailer** to send emails via **Gmail SMTP**.
+This project focuses on clean UI, mobile responsiveness, and reliable message handling to ensure a seamless communication channel between clients and the agency.
+
+# 📨 SD Stroke – Laravel 11 Contact Form with PHPMailer
+
+This project is a Laravel 11 application with a simple frontend and a fully functional contact form using **PHPMailer** to send emails via **Gmail SMTP**.  
 No database is used. The form submits via AJAX and delivers messages to a Gmail inbox.
 
 ---
@@ -48,16 +53,16 @@ composer require phpmailer/phpmailer
 cp .env.example .env
 ```
 
-Update `.env` and add the following for PHPMailer:
+Update your `.env` file and add:
 
 ```env
 MAIL_SMTP_HOST=smtp.gmail.com
 MAIL_SMTP_PORT=587
 MAIL_SMTP_ENCRYPTION=tls
-MAIL_SMTP_USERNAME= your mail
-MAIL_SMTP_PASSWORD='your password'
+MAIL_SMTP_USERNAME=your-email@gmail.com
+MAIL_SMTP_PASSWORD=your-app-password
 MAIL_SENDER_NAME="Website Contact Form"
-MAIL_RECEIVER_EMAIL= your mail
+MAIL_RECEIVER_EMAIL=your-email@gmail.com
 ```
 
 🔐 **Use a Gmail App Password** from https://myaccount.google.com/apppasswords
@@ -90,13 +95,13 @@ $mail->addAddress(env('MAIL_RECEIVER_EMAIL'));
 php artisan serve
 ```
 
-Then open in browser: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+Then open in your browser: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ---
 
 ## ❌ No Database Required
 
-No need to run migrations. This app does not use any database.
+No need to run migrations. This app does **not use a database**.
 
 ```bash
 # Skip this
@@ -107,52 +112,40 @@ php artisan migrate
 
 ## 📁 Project Structure
 
-SD_Stroke Project Structure
-===========================
-
-Project root: sd_stroke/
-
+```
+sd_stroke/
 ├── app/
 │   └── Http/
 │       └── Controllers/
-│           └── MailController.php         # Handles PHPMailer logic and email sending
+│           └── MailController.php          # Handles PHPMailer logic
 
 ├── bootstrap/
-│   └── app.php                            # Laravel bootstrap file
+│   └── app.php                             # Laravel bootstrap file
 
 ├── public/
 │   ├── css/
-│   │   └── style.css                      # Custom frontend styling
-│   ├── images/                            # Any images (logo, background, etc.)
-│   └── index.php                          # Laravel public entry point
+│   │   └── style.css                       # Custom frontend styling
+│   ├── images/                             # Static images (logo, etc.)
+│   └── index.php                           # Laravel public entry point
 
 ├── resources/
 │   └── views/
-│       ├── index.blade.php                # Main HTML view (contact form, frontend)
+│       ├── index.blade.php                 # Main view with contact form
 │       └── emails/
-│           └── contact.blade.php          # Optional: email HTML template
+│           └── contact.blade.php           # (Optional) email template
 
 ├── routes/
-│   └── web.php                            # Route definition for GET / and POST /sendmail
+│   └── web.php                             # Routes: homepage and form submit
 
 ├── storage/
 │   └── logs/
-│       └── laravel.log                    # Laravel log file
+│       └── laravel.log                     # Laravel logs
 
-├── .env                                   # Environment file (contains SMTP credentials)
-├── .gitignore                             # Recommended to ignore /vendor, .env, etc.
-├── composer.json                          # Dependencies and autoload
-├── package.json                           # (Optional) for frontend tooling
-├── README.md / README_SD_Stroke.txt       # Documentation file
-
----
-
-Folders you mostly work with:
-- app/Http/Controllers/
-- resources/views/
-- public/css/
-- routes/web.php
-- .env
+├── .env                                    # Contains SMTP credentials
+├── .gitignore                              # Ignores vendor, .env, etc.
+├── composer.json                           # Laravel & PHPMailer dependencies
+├── README.md                               # Project documentation
+```
 
 ---
 
