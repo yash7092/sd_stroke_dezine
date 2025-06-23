@@ -50,7 +50,8 @@ composer require phpmailer/phpmailer
 ### 3. Create .env File
 
 ```bash
-cp .env.example .env
+copy .env.example .env
+php artisan key:generate
 ```
 
 Update your `.env` file and add:
@@ -63,6 +64,7 @@ MAIL_SMTP_USERNAME=your-email@gmail.com
 MAIL_SMTP_PASSWORD=your-app-password
 MAIL_SENDER_NAME="Website Contact Form"
 MAIL_RECEIVER_EMAIL=your-email@gmail.com
+
 ```
 
 🔐 **Use a Gmail App Password** from https://myaccount.google.com/apppasswords
