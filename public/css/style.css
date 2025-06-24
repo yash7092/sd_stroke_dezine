@@ -243,6 +243,7 @@ nav {
 
 /* === BIG SCREEN (Large Laptop/Desktop) === */
 @media (min-width: 1440px) {
+
     .home-content {
         max-width: 1800px;
         gap: 3rem;
@@ -264,9 +265,14 @@ nav {
 /* === MOBILE (Tablets & Phones) === */
 @media (max-width: 768px) {
     .home-content {
+        position: static;
+        transform: none;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         text-align: center;
+        padding: 2rem 1rem;
+        min-height: 100vh;
     }
 
     .home-text {
@@ -292,10 +298,14 @@ nav {
 /* About Section */
 
 #about {
-    margin-top: 6rem;
+    min-height: 100vh;
+    /* 👈 fill full screen height */
     padding: 6rem 2rem;
     background: var(--bg-color);
     color: var(--text-color);
+    display: flex;
+    align-items: center;
+    /* vertically center the content */
 }
 
 .about-content {
@@ -303,11 +313,13 @@ nav {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 3rem;
     padding: 0 1rem;
     flex-wrap: wrap;
-    /* allow wrapping on narrower screens */
+    width: 100%;
 }
+
 
 .about-image {
     flex: 1 1 350px;
@@ -372,12 +384,12 @@ nav {
 
     .about-content {
         gap: 4rem;
-        max-width: 1400px;
+        max-width: 1800px;
     }
 
     .about-image {
-        flex: 1 1 450px;
-        max-width: 450px;
+        flex: 1 1 520px;
+        max-width: 520px;
         justify-content: center;
     }
 
@@ -388,15 +400,15 @@ nav {
     }
 
     .about-text h2 {
-        font-size: 3.2rem;
+        font-size: 3.9rem;
     }
 
     .about-text h3 {
-        font-size: 2.2rem;
+        font-size: 2.9rem;
     }
 
     .about-text p {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         line-height: 1.8;
     }
 }
