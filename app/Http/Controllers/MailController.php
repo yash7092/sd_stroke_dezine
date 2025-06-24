@@ -25,7 +25,6 @@ class MailController extends Controller
         $mail = new PHPMailer(true);
 
         try {
-            
             $mail->isSMTP();
             $mail->Host       = env('MAIL_SMTP_HOST');
             $mail->SMTPAuth   = true;

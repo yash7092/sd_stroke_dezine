@@ -67,7 +67,7 @@ nav {
 
 .nav-menu li a {
     text-decoration: none;
-    color: var(--primary-color);
+    color: black;
 }
 
 /* Hover underline effect */
@@ -378,11 +378,12 @@ nav {
     .about-image {
         flex: 1 1 450px;
         max-width: 450px;
+        justify-content: center;
     }
 
     .about-text {
         flex: 2 1 700px;
-        text-align: left;
+        text-align: center;
         padding-right: 2rem;
     }
 
@@ -397,6 +398,33 @@ nav {
     .about-text p {
         font-size: 1.5rem;
         line-height: 1.8;
+    }
+}
+
+@media (max-width: 1200px) and (min-width: 726px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 550px;
+        margin: 0 auto;
+    }
+
+    .about-image img {
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    .about-text {
+        text-align: center;
+        flex: 0;
     }
 }
 
@@ -935,13 +963,16 @@ nav {
         opacity: 0;
         transform: translate(-50%, -60%);
     }
+
     10% {
         opacity: 1;
         transform: translate(-50%, -50%);
     }
+
     90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translate(-50%, -40%);
