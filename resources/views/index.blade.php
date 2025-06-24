@@ -118,7 +118,7 @@
     <section class="services-section" id="services">
         <h2>OUR SERVICES</h2>
         <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/1st.png" alt="Creative Design" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -129,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-right" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-right" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/2nd.png" alt="Virtual Samples" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -140,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-left" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-left" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/3rd.png" alt="Raster to Vector" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -151,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/7th.png" alt="Web Design" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -161,7 +161,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="zoom-in" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/8th.png" alt="Files Ready to Print" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -171,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/4th.png" alt="Branding" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -181,7 +181,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/5th.png" alt="Apparel Design" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -191,7 +191,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/6th.png" alt="Color Separation" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -201,7 +201,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/9th.png" alt="Promotional Design" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -217,7 +217,7 @@
         </div>
 
         <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in-left" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in-left" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/mobile.jpg" alt="Mobile App Development" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -227,7 +227,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="zoom-in-right" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in-right" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/desk.jpg" alt="Software Development" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -238,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="location.reload();">
+            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
                 <img src="images/web.png" alt="Web Development" class="service-icon">
                 <div>
                     <div class="service-title">
@@ -541,7 +541,10 @@
             btnText.style.display = "inline";
             btnLoader.style.display = "none";
         });
-        
+
+        function goToHome() {
+            window.location.href = window.location.origin + window.location.pathname;
+        }
     </script>
 </body>
 
