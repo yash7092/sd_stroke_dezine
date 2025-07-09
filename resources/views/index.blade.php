@@ -55,14 +55,14 @@
 
 <body>
     <header>
-        <nav id="navbar">
+        <nav id="navbar" role="navigation">
             <div class="logo">
                 <a href="#home">
                     <img src="images/logo.svg" alt="sd stroke design" />
                 </a>
             </div>
 
-            <button class="menu-toggle" aria-label="Toggle navigation" onclick="toggleMenu()">
+            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </button>
 
@@ -76,260 +76,239 @@
         </nav>
     </header>
 
-    <section id="home">
-        <div class="home-content">
-            <div class="home-text" data-aos="fade-right">
-                <h1>
-                    Nothing is Possible <br />
-                    Without Stroke, Everything <br />
-                    Starts with Stroke and Ends with Stroke
-                </h1>
-                <p>
-                    We create compelling designs that connect deeply and<br />
-                    inspire action from your customers
-                </p>
-            </div>
-            <div class="home-image" data-aos="fade-left" data-aos-delay="200">
-                <img src="images/home_pic.png" alt="Pointing Man" />
-            </div>
-        </div>
-    </section>
-
-
-
-    <section id="about">
-        <div class="about-content" data-aos="fade-up">
-            <div class="about-image" data-aos="fade-right" data-aos-delay="200">
-                <img src="images/about.jpg" alt="About us image" />
-            </div>
-            <div class="about-text" data-aos="fade-left" data-aos-delay="400">
-                <h2>About us</h2>
-                <h3>Premium Design Services for Your Business</h3>
-                <p>
-                    Stroke Dezine is a team of talented designers dedicated to creating
-                    exceptional visual solutions for your brand. We blend creativity
-                    and professionalism to deliver high-quality design services that
-                    help you stand out.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-section" id="services">
-        <h2>OUR SERVICES</h2>
-        <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/1st.png" alt="Creative Design" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Creative Design</h1>
-                    </div>
-                    <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than
-                        words.</p>
+    <main role="main">
+        <section id="home">
+            <div class="home-content">
+                <div class="home-text custom-fade-in">
+                    <h1>
+                        Nothing is Possible <br />
+                        Without Stroke, Everything <br />
+                        Starts with Stroke and Ends with Stroke
+                    </h1>
+                    <p>
+                        We create compelling designs that connect deeply and<br />
+                        inspire action from your customers
+                    </p>
+                </div>
+                <div class="home-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="images/home_pic.png" alt="Pointing Man" />
                 </div>
             </div>
+        </section>
 
-            <div class="service-card" data-aos="fade-right" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/2nd.png" alt="Virtual Samples" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Virtual Samples</h1>
-                    </div>
-                    <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.
+        <section id="about">
+            <div class="about-content" data-aos="fade-up">
+                <div class="about-image custom-fade-in">
+                    <img src="images/about.jpg" alt="About us image" />
+                </div>
+                <div class="about-text custom-fade-in" data-aos="fade-left" data-aos-delay="400">
+                    <h2>About us</h2>
+                    <h3>Premium Design Services for Your Business</h3>
+                    <p>
+                        Stroke Dezine is a team of talented designers dedicated to creating
+                        exceptional visual solutions for your brand. We blend creativity
+                        and professionalism to deliver high-quality design services that
+                        help you stand out.
                     </p>
                 </div>
             </div>
+        </section>
 
-            <div class="service-card" data-aos="fade-left" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/3rd.png" alt="Raster to Vector" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Raster to Vector</h1>
+        <section class="services-section" id="services">
+            <h2 class="custom-fade-in">OUR SERVICES</h2>
+            <div class="services-grid">
+                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Creative Design" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/1st.png" alt="Creative Design" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Creative Design</h1>
+                        </div>
+                        <p>We create alluring designs for brochures, magazines, and more! Our designs speak louder than
+                            words.</p>
                     </div>
-                    <p>Convert your documents into electronic formats securely without any hassles with Stroke Dezine
-                    </p>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-right" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Virtual Samples" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/2nd.png" alt="Virtual Samples" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Virtual Samples</h1>
+                        </div>
+                        <p>Our virtual samples set the tone for your brand and leave a long-lasting impression on customers.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-left" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Raster to Vector" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/3rd.png" alt="Raster to Vector" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Raster to Vector</h1>
+                        </div>
+                        <p>Convert your documents into electronic formats securely without any hassles with Stroke Dezine
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Web Design" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/7th.png" alt="Web Design" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Web Design</h1>
+                        </div>
+                        <p>Make your way to the online world with our captivating Web Design services!</p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="zoom-in" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Files Ready to Print" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/8th.png" alt="Files Ready to Print" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Files Ready to Print</h1>
+                        </div>
+                        <p>Cost-effective and custom print service from the best in the business.</p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Branding" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/4th.png" alt="Branding" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Branding</h1>
+                        </div>
+                        <p>We provide powerful branding services that will grow your business to new zeniths.</p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Apparel Design" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/5th.png" alt="Apparel Design" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Apparel Design</h1>
+                        </div>
+                        <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Color Separation" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/6th.png" alt="Color Separation" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Color Separation</h1>
+                        </div>
+                        <p>Get the best color separation service with top-notch results.</p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Promotional Product Design" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/9th.png" alt="Promotional Design" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Promotional Product Design</h1>
+                        </div>
+                        <p>Your product design should speak the quality & features, and we take that seriously!</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/7th.png" alt="Web Design" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Web Design</h1>
-                    </div>
-                    <p>Make your way to the online world with our captivating Web Design services!</p>
-                </div>
+            <div class="dev custom-fade-in" data-aos="fade-up">
+                <h1>Developers</h1>
             </div>
 
-            <div class="service-card" data-aos="zoom-in" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/8th.png" alt="Files Ready to Print" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Files Ready to Print</h1>
+            <div class="services-grid">
+                <div class="service-card custom-fade-in" data-aos="zoom-in-left" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Mobile App Development" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/mobile.jpg" alt="Mobile App Development" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Mobile App Development</h1>
+                        </div>
+                        <p>Developing user-friendly and high-performance applications for Android and iOS devices</p>
                     </div>
-                    <p>Cost-effective and custom print service from the best in the business.</p>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="zoom-in-right" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Software Development" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/desk.jpg" alt="Software Development" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Software Development</h1>
+                        </div>
+                        <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card custom-fade-in" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()" tabindex="0" aria-label="Web Development" onkeydown="if(event.key==='Enter'){goToHome();}">
+                    <img src="images/web.png" alt="Web Development" class="service-icon">
+                    <div>
+                        <div class="service-title">
+                            <h1>Web Development</h1>
+                        </div>
+                        <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/4th.png" alt="Branding" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Branding</h1>
-                    </div>
-                    <p>We provide powerful branding services that will grow your business to new zeniths.</p>
+        <section id="projects" class="projects-section">
+            <h1 class="projects-title custom-fade-in">My Projects</h1>
+            <div class="custom-slider-container">
+                <div class="custom-slider-track" id="customSliderTrack">
+                    <div class="custom-slide"><img src="images/01.jpg" alt="Project 1"></div>
+                    <div class="custom-slide"><img src="images/02.jpg" alt="Project 2"></div>
+                    <div class="custom-slide"><img src="images/03.jpg" alt="Project 3"></div>
+                    <div class="custom-slide"><img src="images/04.jpg" alt="Project 4"></div>
                 </div>
             </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/5th.png" alt="Apparel Design" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Apparel Design</h1>
-                    </div>
-                    <p>From trend research to choosing colors, materials, and brand identity—everything is included.</p>
-                </div>
+            <div class="custom-slider-dots" id="customSliderDots"></div>
+            <div class="custom-slider-btn-wrapper">
+                <button class="custom-slider-btn">MORE WORKS</button>
             </div>
+        </section>
 
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/6th.png" alt="Color Separation" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Color Separation</h1>
+        <section class="contact-section" id="contact">
+            <div class="contact-form custom-fade-in">
+                <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
+                    @csrf
+                    <div class="row two-cols">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder=" " required />
+                            <label>Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder=" " required />
+                            <label>Email</label>
+                        </div>
                     </div>
-                    <p>Get the best color separation service with top-notch results.</p>
-                </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder=" " required />
+                            <label>Subject</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <textarea name="message" rows="5" placeholder=" " required></textarea>
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <button type="submit" id="sendBtn" class="send-btn">
+                            <span id="btnText">Send Message</span>
+                            <span id="btnLoader" style="display: none;">Sending...</span>
+                        </button>
+                    </div>
+                </form>
+                <div id="successPopup" style="display:none;">Mail sent successfully!</div>
             </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/9th.png" alt="Promotional Design" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Promotional Product Design</h1>
-                    </div>
-                    <p>Your product design should speak the quality & features, and we take that seriously!</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="dev" data-aos="fade-up">
-            <h1>Developers</h1>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card" data-aos="zoom-in-left" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/mobile.jpg" alt="Mobile App Development" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Mobile App Development</h1>
-                    </div>
-                    <p>Developing user-friendly and high-performance applications for Android and iOS devices</p>
-                </div>
-            </div>
-
-            <div class="service-card" data-aos="zoom-in-right" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/desk.jpg" alt="Software Development" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Software Development</h1>
-                    </div>
-                    <p>Creating reliable and scalable software solutions for desktops, servers, and enterprise systems.
-                    </p>
-                </div>
-            </div>
-
-            <div class="service-card" data-aos="zoom-in-up" data-aos-duration="800" onclick="goToHome()">
-                <img src="images/web.png" alt="Web Development" class="service-icon">
-                <div>
-                    <div class="service-title">
-                        <h1>Web Development</h1>
-                    </div>
-                    <p>Designing and building responsive, interactive websites and web applications for all devices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h1 class="projects-title" data-aos="fade-up">My Projects</h1>
-
-        <div class="slider-container" data-aos="zoom-in-up">
-            <div class="slider-track" id="sliderTrack">
-                <div class="slide" data-aos="fade-right">
-                    <img src="images/01.jpg" alt="Project 1" onclick="zoomImage(this)" />
-                </div>
-                <div class="slide" data-aos="fade-up">
-                    <img src="images/01.jpg" alt="Project 2" onclick="zoomImage(this)" />
-                </div>
-                <div class="slide" data-aos="fade-left">
-                    <img src="images/01.jpg" alt="Project 3" onclick="zoomImage(this)" />
-                </div>
-            </div>
-
-            <button class="nav-btn prev" onclick="moveSlide(-1)">❮</button>
-            <button class="nav-btn next" onclick="moveSlide(1)">❯</button>
-
-            <div class="dots-container" id="dots"></div>
-        </div>
-
-
-        <!-- Zoom Modal -->
-        <div id="zoomModal" class="zoom-modal">
-            <button class="zoom-nav prev" onclick="zoomNavigate(-1)">❮</button>
-            <img id="zoomedImage" src="" alt="Zoomed Project">
-            <button class="zoom-nav next" onclick="zoomNavigate(1)">❯</button>
-            <span class="close-btn" onclick="closeZoom()">&times;</span>
-            <div class="zoom-dots" id="zoomDots"></div>
-        </div>
-
-    </section>
-
-    <section class="contact-section" id="contact">
-        <div class="contact-form">
-            <form action="{{ url('/sendmail') }}" method="POST" id="contactForm">
-                @csrf
-                <div class="row two-cols">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder=" " required />
-                        <label>Name</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder=" " required />
-                        <label>Email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder=" " required />
-                        <label>Subject</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group">
-                        <textarea name="message" rows="5" placeholder=" " required></textarea>
-                        <label>Message</label>
-                    </div>
-                </div>
-                <div class="row center">
-                    <button type="submit" id="sendBtn" class="send-btn">
-                        <span id="btnText">Send Message</span>
-                        <span id="btnLoader" style="display: none;">Sending...</span>
-                    </button>
-                </div>
-            </form>
-            <div id="successPopup" style="display:none;">Mail sent successfully!</div>
-        </div>
-    </section>
-
-
-
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col">
                 <h4>Contact</h4>
                 <p>+1 234 567 123</p>
-                <p>hello@strokedezine.com/p>
+                <p>hello@strokedezine.com</p>
             </div>
 
             <div class="footer-col">
@@ -354,7 +333,11 @@
     <script>
         function toggleMenu() {
             const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
             navMenu.classList.toggle('active');
+            // Toggle aria-expanded for accessibility
+            const expanded = navMenu.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', expanded);
         }
 
         // Close menu when a nav link is clicked (on mobile)
@@ -374,8 +357,8 @@
         const images = document.querySelectorAll('.slide img');
         const zoomedImg = document.getElementById('zoomedImage');
         const zoomDots = document.getElementById('zoomDots');
-        const sliderTrack = document.getElementById('sliderTrack');
-        const dotsContainer = document.getElementById('dots');
+        const sliderTrack = document.getElementById('customSliderTrack');
+        const dotsContainer = document.getElementById('customSliderDots');
         const slides = document.querySelectorAll('.slide');
 
         let currentIndex = 0;
@@ -545,7 +528,95 @@
         function goToHome() {
             window.location.href = window.location.origin + window.location.pathname;
         }
+
+        // Force AOS to refresh when scrolling to the top, so home animation re-triggers
+        window.addEventListener('scroll', function() {
+            if (window.scrollY === 0) {
+                if (window.AOS && typeof window.AOS.refreshHard === 'function') {
+                    window.AOS.refreshHard();
+                }
+                // Manually replay AOS animation for home section
+                const homeSection = document.querySelector('#home');
+                if (homeSection) {
+                    homeSection.classList.remove('aos-animate');
+                    void homeSection.offsetWidth; // Force reflow
+                    setTimeout(() => {
+                        homeSection.classList.add('aos-animate');
+                    }, 10);
+                }
+            }
+        });
+
+        // Remove aos-animate class when element leaves the viewport, so AOS can re-apply it
+        const aosElements = document.querySelectorAll('[data-aos]');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    entry.target.classList.remove('aos-animate');
+                }
+            });
+        }, { threshold: 0.1 }); // Lower threshold for more reliable exit detection
+
+        aosElements.forEach(el => observer.observe(el));
     </script>
+    <script>
+        // Custom fade-in animation for .custom-fade-in elements
+        document.querySelectorAll('.custom-fade-in').forEach(el => {
+          el.classList.remove('visible');
+        });
+        const fadeEls = document.querySelectorAll('.custom-fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+        }, { threshold: 0.01 });
+        fadeEls.forEach(el => fadeObserver.observe(el));
+    </script>
+    <script>
+// True carousel slider logic with dynamic slide width
+const imagesCount = document.querySelectorAll('#customSliderTrack .custom-slide').length;
+let slidesToShow = 3;
+let current = 0;
+const track = document.getElementById('customSliderTrack');
+const container = document.querySelector('.custom-slider-container');
+const dots = document.getElementById('customSliderDots');
+function getSlidesToShow() {
+    if (window.innerWidth <= 768) return 1;
+    if (window.innerWidth <= 1200) return 2;
+    return 3;
+}
+function updateSlider() {
+    slidesToShow = getSlidesToShow();
+    const gap = parseInt(getComputedStyle(track).gap || 0);
+    const slideWidth = (container.offsetWidth - gap * (slidesToShow - 1)) / slidesToShow;
+    track.querySelectorAll('.custom-slide').forEach(slide => {
+        slide.style.minWidth = slide.style.maxWidth = slide.style.width = slideWidth + 'px';
+    });
+    track.style.transform = `translateX(-${current * (slideWidth + gap)}px)`;
+    renderDots();
+}
+function renderDots() {
+    dots.innerHTML = '';
+    for (let i = 0; i <= imagesCount - slidesToShow; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'custom-dot' + (i === current ? ' active' : '');
+        dot.onclick = () => { current = i; updateSlider(); };
+        dots.appendChild(dot);
+    }
+}
+function autoSlide() {
+    slidesToShow = getSlidesToShow();
+    current = (current + 1) % (imagesCount - slidesToShow + 1);
+    updateSlider();
+}
+window.addEventListener('resize', updateSlider);
+updateSlider();
+setInterval(autoSlide, 2500);
+</script>
 </body>
 
 </html>
