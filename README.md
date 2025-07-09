@@ -1,0 +1,1 @@
+# sd_stroke_dezine
