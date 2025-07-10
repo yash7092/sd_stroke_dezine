@@ -567,15 +567,16 @@ nav {
 
 
 .projects-section {
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 16rem;
-  padding-bottom: 12rem;
-  background-color: var(--background-color);
-  text-align: center;
-  scroll-margin-top: 7rem;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  background: var(--background-color);
 }
 
 .projects-title {
@@ -583,6 +584,8 @@ nav {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 6rem;  
+  margin-bottom: 2.0rem;
 }
 
 .slider-container {
