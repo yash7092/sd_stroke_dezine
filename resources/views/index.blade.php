@@ -61,55 +61,59 @@
                     <img src="images/logo.svg" alt="sd stroke design" />
                 </a>
             </div>
-
             <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">
-                <i class="fa-solid fa-bars"></i>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT FATBEE</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#projects">PROJECT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
     </header>
 
     <main role="main">
         <section id="home">
-            <div class="home-content">
-                <div class="home-text custom-fade-in">
-                    <h1>
-                        Nothing is Possible <br />
-                        Without Stroke, Everything <br />
-                        Starts with Stroke and Ends with Stroke
-                    </h1>
-                    <p>
-                        We create compelling designs that connect deeply and<br />
-                        inspire action from your customers
-                    </p>
-                </div>
-                <div class="home-image" data-aos="fade-left" data-aos-delay="200">
-                    <img src="images/home_pic.png" alt="Pointing Man" />
+            <div class="section-container">
+                <div class="home-content">
+                    <div class="home-text custom-fade-in">
+                        <h1>
+                            Nothing is Possible <br />
+                            Without Stroke, Everything <br />
+                            Starts with Stroke and Ends with Stroke
+                        </h1>
+                        <p>
+                            We create compelling designs that connect deeply and<br />
+                            inspire action from your customers
+                        </p>
+                    </div>
+                    <div class="home-image" data-aos="fade-left" data-aos-delay="200">
+                        <img src="images/home_pic.png" alt="Pointing Man" />
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <div class="about-content" data-aos="fade-up">
-                <div class="about-image custom-fade-in">
-                    <img src="images/about.jpg" alt="About us image" />
-                </div>
-                <div class="about-text custom-fade-in" data-aos="fade-left" data-aos-delay="400">
-                    <h2>About us</h2>
-                    <h3>Premium Design Services for Your Business</h3>
-                    <p>
-                        Stroke Dezine is a team of talented designers dedicated to creating
-                        exceptional visual solutions for your brand. We blend creativity
-                        and professionalism to deliver high-quality design services that
-                        help you stand out.
-                    </p>
+            <div class="section-container">
+                <div class="about-content" data-aos="fade-up">
+                    <div class="about-image custom-fade-in">
+                        <img src="images/about.jpg" alt="About us image" />
+                    </div>
+                    <div class="about-text custom-fade-in" data-aos="fade-left" data-aos-delay="400">
+                        <h2>About us</h2>
+                        <h3>Premium Design Services for Your Business</h3>
+                        <p>
+                            Stroke Dezine is a team of talented designers dedicated to creating
+                            exceptional visual solutions for your brand. We blend creativity
+                            and professionalism to deliver high-quality design services that
+                            help you stand out.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -335,20 +339,22 @@
             const navMenu = document.getElementById('navMenu');
             const menuToggle = document.querySelector('.menu-toggle');
             navMenu.classList.toggle('active');
-            // Toggle aria-expanded for accessibility
-            const expanded = navMenu.classList.contains('active');
-            menuToggle.setAttribute('aria-expanded', expanded);
+            menuToggle.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', navMenu.classList.contains('active'));
         }
 
         // Close menu when a nav link is clicked (on mobile)
         document.addEventListener('DOMContentLoaded', () => {
             const navLinks = document.querySelectorAll('.nav-menu a');
             const navMenu = document.getElementById('navMenu');
+            const menuToggle = document.querySelector('.menu-toggle');
 
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     if (window.innerWidth <= 768) {
                         navMenu.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                        menuToggle.setAttribute('aria-expanded', 'false');
                     }
                 });
             });
