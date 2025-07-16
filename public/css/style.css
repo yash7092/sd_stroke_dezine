@@ -1206,29 +1206,22 @@ a:focus {
 /* Custom Project Slider Styles - Centered 3 Slides Fix */
 .custom-slider-container {
   width: 100%;
-  max-width: 1324px;
+  max-width: 1400px;
   margin: 0 auto 1.5rem auto;
   overflow: hidden;
   display: flex;
   justify-content: center;
+  padding: 0 20px;
 }
 .custom-slider-track {
   display: flex;
-  gap: 32px;
+  gap: 24px;
   transition: transform 0.9s cubic-bezier(.77,0,.18,1);
   width: 100%;
   background: #F8F5F1;
   box-sizing: content-box;
-  padding-left: 16px;
-  padding-right: 16px;
-}
-@media (max-width: 1200px) {
-  .custom-slider-container {
-    width: 100%;
-    max-width: 98vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media (max-width: 768px) {
   .custom-slider-container {
@@ -1247,10 +1240,10 @@ a:focus {
   background: transparent;
   border-radius: 18px;
   overflow: hidden;
-  flex: 1 0 0;
+  flex: 1 1 calc(33.333% - 16px);
   min-width: 0;
-  max-width: none;
-  width: auto;
+  max-width: calc(33.333% - 16px);
+  width: calc(33.333% - 16px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1258,8 +1251,9 @@ a:focus {
 }
 .custom-slide img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 250px;
   object-fit: cover;
+  object-position: center;
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.16);
   background: #fff;
@@ -1311,15 +1305,22 @@ a:focus {
   background: #ff8800;
   box-shadow: 0 8px 32px rgba(255,140,0,0.18);
 }
-@media (max-width: 1200px) {
+@media (max-width: 1200px) and (min-width: 769px) {
   .custom-slider-container {
-    max-width: 672px;
+    max-width: 720px;
+    padding: 0 20px;
+    margin: 0 auto 1.5rem auto;
   }
   .custom-slide {
-    width: 320px;
-    min-width: 320px;
-    max-width: 320px;
-    flex: 0 0 320px;
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+    min-width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+  .custom-slider-track {
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media (max-width: 768px) {

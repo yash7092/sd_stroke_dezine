@@ -592,7 +592,11 @@ function getSlidesToShow() {
 function updateSlider() {
     slidesToShow = getSlidesToShow();
     const gap = parseInt(getComputedStyle(track).gap || 0);
-    const slideWidth = (container.offsetWidth - gap * (slidesToShow - 1)) / slidesToShow;
+    const trackPadding = parseInt(getComputedStyle(track).paddingLeft || 0) + parseInt(getComputedStyle(track).paddingRight || 0);
+    const containerPadding = parseInt(getComputedStyle(container).paddingLeft || 0) + parseInt(getComputedStyle(container).paddingRight || 0);
+    const availableWidth = container.offsetWidth - containerPadding - trackPadding;
+    const slideWidth = (availableWidth - gap * (slidesToShow - 1)) / slidesToShow;
+    
     track.querySelectorAll('.custom-slide').forEach(slide => {
         slide.style.minWidth = slide.style.maxWidth = slide.style.width = slideWidth + 'px';
     });
