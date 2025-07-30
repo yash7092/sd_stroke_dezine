@@ -280,6 +280,36 @@ nav {
     margin: 0 auto;
 }
 
+.gallery-grid.grid-3-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: stretch;
+}
+
+/* Center the last two items if there are 2 in the last row */
+.gallery-grid.grid-3-cols > .gallery-item:nth-last-child(2):nth-child(odd),
+.gallery-grid.grid-3-cols > .gallery-item:last-child:nth-child(even) {
+    grid-column: 2 / 3;
+}
+.gallery-grid.grid-3-cols > .gallery-item:last-child:nth-child(odd) {
+    grid-column: 3 / 4;
+}
+
+/* Center last row with 2 images in a 3-column grid */
+.gallery-grid.grid-3-cols {
+    position: relative;
+}
+.gallery-grid.grid-3-cols .last-row {
+    grid-row-start: 2;
+}
+.gallery-grid.grid-3-cols .last-row:first-of-type {
+    grid-column: 2;
+}
+.gallery-grid.grid-3-cols .last-row:last-of-type {
+    grid-column: 3;
+}
+
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -295,10 +325,10 @@ nav {
 }
 
 .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 .gallery-item:hover img {

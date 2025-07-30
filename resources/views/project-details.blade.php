@@ -115,15 +115,18 @@
         <!-- Gallery Section -->
         <div class="gallery-section">
             <h2 class="gallery-title">Project Gallery</h2>
-            <div class="gallery-grid">
+            <div class="gallery-grid{{ $projectSlug === 'project-4' ? ' grid-3-cols' : '' }}">
                 @foreach($relatedImages as $index => $image)
-                <div class="gallery-item size-{{ $image['size'] }}" onclick="openModal('{{ $image['src'] }}', '{{ $image['title'] }}', '{{ $image['description'] }}')">
-                    <img src="{{ $image['src'] }}" alt="{{ $image['title'] }}" loading="lazy">
-                    <div class="gallery-overlay">
-                        <h3 class="gallery-title-text">{{ $image['title'] }}</h3>
-                        <p class="gallery-description">{{ $image['description'] }}</p>
+                    @php
+                        $isLastRow = $projectSlug === 'project-4' && $loop->index >= count($relatedImages) - 2;
+                    @endphp
+                    <div class="gallery-item{{ $isLastRow ? ' last-row' : '' }}" onclick="openModal('{{ asset($image['src']) }}', '{{ $image['title'] }}', '{{ $image['description'] }}')">
+                        <img src="{{ asset($image['src']) }}" alt="{{ $image['title'] }}" loading="lazy" style="max-width:100%;height:auto;display:block;margin:0 auto;">
+                        <div class="gallery-overlay">
+                            <h3 class="gallery-title-text">{{ $image['title'] }}</h3>
+                            <p class="gallery-description">{{ $image['description'] }}</p>
+                        </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
