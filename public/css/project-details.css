@@ -37,13 +37,16 @@ body::-webkit-scrollbar {
 /* Header uses original style.css styling */
 /* Enhanced Header Font Sizes and Colors for Project Pages */
 .nav-menu li {
-    font-size: 1.3rem !important;
-    padding: 0.5rem 0 !important;
+    /* font-size: 1.3rem !important;
+    padding: 0.5rem 0 !important; */
+    position: relative;
+  font-size: 1.15rem;
+  padding: 0.25rem 0;
 }
 
 .nav-menu li a {
     font-size: 1.3rem !important;
-    font-weight: 600 !important;
+    /* font-weight: 600 !important; */
     padding: 0.5rem 1rem !important;
     color: var(--text-color) !important;
     transition: color 0.2s !important;
