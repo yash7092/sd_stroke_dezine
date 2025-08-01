@@ -28,6 +28,7 @@
     <meta name="twitter:description" content="Explore our {{ strtolower($projectTitle) }} project and portfolio at Stroke Dezine.">
     <meta name="twitter:image" content="https://strokedezine.com/{{ $mainImage }}" />
 
+    <title>Sd stroke design</title>
     <!-- ✅ Local CSS File -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/project-details.css') }}">
@@ -54,27 +55,9 @@
 </head>
 
 <body>
-    <header>
-        <nav id="navbar" role="navigation">
-            <div class="logo">
-                <a href="/">
-                    <img src="{{ asset('images/logo.svg') }}" alt="sd stroke design" />
-                </a>
-            </div>
-            <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navMenu" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/#about">ABOUT FATBEE</a></li>
-                <li><a href="/#services">SERVICES</a></li>
-                <li><a href="/#projects">PROJECT</a></li>
-                <li><a href="/#contact">CONTACT</a></li>
-            </ul>
-        </nav>
-    </header>
+    @include('components.header')
+
+    <main role="main">
 
     <div class="project-container">
         <!-- Project Hero Section -->
@@ -115,10 +98,10 @@
         <!-- Gallery Section -->
         <div class="gallery-section">
             <h2 class="gallery-title">Project Gallery</h2>
-            <div class="gallery-grid{{ $projectSlug === 'project-4' ? ' grid-3-cols' : '' }}">
+            <div class="gallery-grid{{ $showThreeColumns ? ' grid-3-cols' : '' }}">
                 @foreach($relatedImages as $index => $image)
                     @php
-                        $isLastRow = $projectSlug === 'project-4' && $loop->index >= count($relatedImages) - 2;
+                        $isLastRow = $showThreeColumns && $loop->index >= count($relatedImages) - 2;
                     @endphp
                     <div class="gallery-item{{ $isLastRow ? ' last-row' : '' }}" onclick="openModal('{{ asset($image['src']) }}', '{{ $image['title'] }}', '{{ $image['description'] }}')">
                         <img src="{{ asset($image['src']) }}" alt="{{ $image['title'] }}" loading="lazy" style="max-width:100%;height:auto;display:block;margin:0 auto;">
@@ -131,28 +114,9 @@
             </div>
         </div>
     </div>
+    </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <p>+1 234 567 123</p>
-                <p>hello@strokedezine.com</p>
-            </div>
-            <div class="footer-col">
-                <h4>Head Quarters</h4>
-                <p>Stroke Dezine Pvt. Ltd.</p>
-                <p>547 The Point St, Columbus</p>
-                <p>OH 43201, USA</p>
-            </div>
-            <div class="footer-col logo-col">
-                <img src="{{ asset('images/logo.svg') }}" alt="Logo" />
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Stroke Dezine. All rights reserved.</p>
-        </div>
-    </footer>
+    @include('components.footer')
 
     <!-- Modal for image preview -->
     <div id="imageModal" class="modal">

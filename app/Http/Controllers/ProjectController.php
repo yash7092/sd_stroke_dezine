@@ -52,23 +52,65 @@ class ProjectController extends Controller
                 'mainImage' => 'images/02.jpg',
                 'relatedImages' => [
                     [
-                        'src' => 'images/02.jpg',
+                        'src' => 'images/EMB/1.jpg',
                         'title' => 'Homepage Design',
                         'description' => 'Eye-catching homepage with modern design elements.',
                         'size' => 'large'
                     ],
                     [
-                        'src' => 'images/03.jpg',
+                        'src' => 'images/EMB/2.jpg',
                         'title' => 'Mobile Responsive',
                         'description' => 'Mobile-first design approach for better user experience.',
                         'size' => 'medium'
                     ],
                     [
-                        'src' => 'images/04.jpg',
+                        'src' => 'images/EMB/3.jpg',
                         'title' => 'User Interface',
                         'description' => 'Intuitive user interface design with smooth interactions.',
                         'size' => 'large'
-                    ]
+                    ],
+                    [
+                        'src' => 'images/EMB/4.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/5.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/6.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/7.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/8.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/9.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/EMB/10.jpg',
+                        'title' => 'Homepage Design',
+                        'description' => 'Eye-catching homepage with modern design elements.',
+                        'size' => 'large'
+                    ],
                 ]
             ],
             'project-3' => [
@@ -127,26 +169,56 @@ class ProjectController extends Controller
                     ],
                     [
                         'src' => 'images/RasterToVector/Vector_02.jpg',
-                        'title' => 'Campaign Banner',
-                        'description' => 'Eye-catching banner design for digital advertising.',
+                        'title' => 'Social Media Graphics',
+                        'description' => 'Engaging social media content for the campaign.',
                         'size' => 'large'
                     ],
                     [
                         'src' => 'images/RasterToVector/Vector_03.jpg',
-                        'title' => 'Social Media Posts',
-                        'description' => 'Engaging social media content for the campaign.',
-                        'size' => 'medium'
+                        'title' => 'Email Marketing',
+                        'description' => 'Professional email marketing templates.',
+                        'size' => 'large'
                     ],
                     [
                         'src' => 'images/RasterToVector/Vector_04.jpg',
-                        'title' => 'Email Marketing',
-                        'description' => 'Professional email marketing templates.',
-                        'size' => 'medium'
+                        'title' => 'Landing Page',
+                        'description' => 'High-converting landing page design.',
+                        'size' => 'large'
                     ],
                     [
                         'src' => 'images/RasterToVector/Vector_05.jpg',
-                        'title' => 'Landing Page',
-                        'description' => 'High-converting landing page design.',
+                        'title' => 'Digital Ads',
+                        'description' => 'Creative digital advertising materials.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_01.jpg',
+                        'title' => 'Brand Identity',
+                        'description' => 'Complete brand identity for the campaign.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_02.jpg',
+                        'title' => 'Print Materials',
+                        'description' => 'Professional print marketing materials.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_03.jpg',
+                        'title' => 'Web Design',
+                        'description' => 'Modern web design for the campaign.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_04.jpg',
+                        'title' => 'Mobile App',
+                        'description' => 'Mobile application design.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_05.jpg',
+                        'title' => 'Analytics Dashboard',
+                        'description' => 'Data visualization and analytics.',
                         'size' => 'large'
                     ]
                 ]
@@ -164,7 +236,8 @@ class ProjectController extends Controller
             'projectDescription' => $projectData['description'],
             'projectSlug' => $project,
             'mainImage' => $projectData['mainImage'],
-            'relatedImages' => $projectData['relatedImages']
+            'relatedImages' => $projectData['relatedImages'],
+            'showThreeColumns' => in_array($project, ['project-2', 'project-4'])
         ]);
     }
 } 
