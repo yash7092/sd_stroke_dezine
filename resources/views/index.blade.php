@@ -257,10 +257,22 @@
             <h1 class="projects-title custom-fade-in">My Projects</h1>
             <div class="custom-slider-container">
                 <div class="custom-slider-track" id="customSliderTrack">
-                    <div class="custom-slide"><img src="images/01.jpg" alt="Project 1"></div>
-                    <div class="custom-slide"><img src="images/02.jpg" alt="Project 2"></div>
-                    <div class="custom-slide"><img src="images/03.jpg" alt="Project 3"></div>
-                    <div class="custom-slide"><img src="images/04.jpg" alt="Project 4"></div>
+                    <div class="custom-slide">
+                          <a href="view-project.php?project=promo">
+                    <img src="images/01.jpg" alt="Project 1">
+                </div>
+                    <div class="custom-slide">
+                         <a href="view-project.php?project=embroidery">       
+                    <img src="images/02.jpg" alt="Project 2">
+                </div>
+                    <div class="custom-slide">
+                         <a href="view-project.php?project=embroidery2">
+                        <img src="images/03.jpg" alt="Project 3">
+                    </div>
+                    <div class="custom-slide">
+                        <a href="view-project.php?project=embroidery3">
+                        <img src="images/04.jpg" alt="Project 4">
+                    </div>
                 </div>
             </div>
             <div class="custom-slider-dots" id="customSliderDots"></div>
