@@ -120,25 +120,31 @@ class ProjectController extends Controller
                 'mainImage' => 'images/04.jpg',
                 'relatedImages' => [
                     [
-                        'src' => 'images/04.jpg',
+                        'src' => 'images/RasterToVector/Vector_01.jpg',
                         'title' => 'Campaign Banner',
                         'description' => 'Eye-catching banner design for digital advertising.',
                         'size' => 'large'
                     ],
                     [
-                        'src' => 'images/01.jpg',
+                        'src' => 'images/RasterToVector/Vector_02.jpg',
+                        'title' => 'Campaign Banner',
+                        'description' => 'Eye-catching banner design for digital advertising.',
+                        'size' => 'large'
+                    ],
+                    [
+                        'src' => 'images/RasterToVector/Vector_03.jpg',
                         'title' => 'Social Media Posts',
                         'description' => 'Engaging social media content for the campaign.',
                         'size' => 'medium'
                     ],
                     [
-                        'src' => 'images/02.jpg',
+                        'src' => 'images/RasterToVector/Vector_04.jpg',
                         'title' => 'Email Marketing',
                         'description' => 'Professional email marketing templates.',
                         'size' => 'medium'
                     ],
                     [
-                        'src' => 'images/03.jpg',
+                        'src' => 'images/RasterToVector/Vector_05.jpg',
                         'title' => 'Landing Page',
                         'description' => 'High-converting landing page design.',
                         'size' => 'large'
